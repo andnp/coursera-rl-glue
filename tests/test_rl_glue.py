@@ -76,7 +76,7 @@ class TestInterface(unittest.TestCase):
         self.assertIn(t, [True, False])
 
     def test_episode(self):
-        np.random.seed()
+        np.random.seed(0)
         exp = RLGlue(MarkovChain, TestAgent)
 
         exp.rl_init(agent_init_info={}, env_init_info={ 'size': 5 })

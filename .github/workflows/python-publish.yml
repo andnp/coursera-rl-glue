@@ -16,6 +16,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -27,6 +29,6 @@ jobs:
     - name: Test
       run: ./scripts/run_tests.sh
     - name: Publish
-      env: 
+      env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: ./scripts/tag.sh
