@@ -3,6 +3,9 @@
 git config credential.helper "store --file=.git/credentials"
 echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 
+git config user.email "andnpatterson@gmail.com"
+git config user.name "github-action"
+
 # get highest tag number
 VERSION=`git describe --abbrev=0 --tags`
 
