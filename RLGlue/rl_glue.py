@@ -81,8 +81,7 @@ class RLGlue:
         """Starts RL-Glue environment.
 
         Returns:
-            (float, state, Boolean): reward, state observation, boolean
-                indicating termination
+            state: a one dimensional state representation of the agent location.
         """
         self.total_reward = 0.0
         self.num_steps = 1
